@@ -1,14 +1,14 @@
 import paho.mqtt.client as mqtt
 import requests
-
+import os
 # Gotify settings
-GOTIFY_URL = "https://<YOUR_GOTIFY_URL>/message"  # Replace with your Gotify URL
-GOTIFY_TOKEN = "<YOUR_GOTIFY_TOKEN>"  # Replace with your Gotify app token
+GOTIFY_URL = "https://<https://gotify-t4xq.onrender.com/#/>/message"  # Replace with your Gotify URL
+GOTIFY_TOKEN = "<AyNtgk3uP2l9sJw>"  # Replace with your Gotify app token
 
 # Adafruit IO settings
-IO_USERNAME = "<YOUR_ADAFRUIT_IO_USERNAME>"  # Replace with your Adafruit IO username
-IO_KEY = "<YOUR_ADAFRUIT_IO_KEY>"  # Replace with your Adafruit IO key
-FEED_NAME = "<YOUR_FEED_NAME>"  # Replace with the name of the feed you want to monitor
+IO_USERNAME = "<CAACONGO>"  # Replace with your Adafruit IO username
+IO_KEY = "<IO_KEY = os.getenv("ADAFRUIT_IO_KEY")>"  # Replace with your Adafruit IO key
+FEED_NAME = "<4em-ac-in-1>"  # Replace with the name of the feed you want to monitor
 ALERT_THRESHOLD = 50  # Set your alert threshold (e.g., notify if value > 50)
 
 # Function to send a push notification via Gotify
@@ -56,3 +56,5 @@ client.subscribe(f"{IO_USERNAME}/feeds/{FEED_NAME}")
 # Start listening
 print(f"Monitoring feed '{FEED_NAME}' for alerts...")
 client.loop_forever()
+
+
